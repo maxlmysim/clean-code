@@ -32,25 +32,26 @@ var createNewTaskElement = function (taskString) {
   var deleteButton = document.createElement("button");//delete button
   var deleteButtonImg = document.createElement("img");//delete button image
 
-  listItem.className = 'tasks-list'
+  listItem.className = "tasks-list";
 
   label.innerText = taskString;
-  label.className = 'todo-name';
+  label.className = "todo-name";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
+  checkBox.className = "task-checkbox";
   editInput.type = "text";
   editInput.className = "todo-name-input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "edit";
-  editButton.classList.add('btn');
+  editButton.classList.add("btn");
 
   deleteButton.className = "delete";
-  deleteButton.classList.add('btn');
+  deleteButton.classList.add("btn");
 
-  deleteButtonImg.src = './remove.svg';
-  deleteButtonImg.className = 'btn-img-del'
+  deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.className = "btn-img-del";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,7 +88,7 @@ var editTask = function () {
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector('input[type=text]');
+  var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".edit");
   var containsClass = listItem.classList.contains("edit-mode");
@@ -188,7 +189,7 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
 }
 
 
-// Issues with usability don't get seen until they are in front of a human tester.
+// Issues with usability don"t get seen until they are in front of a human tester.
 
 //prevent creation of empty tasks.
 
